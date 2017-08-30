@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pictureshow.co">
-    <meta name="keywords" content="Pictureshow.co">
-    <meta name="author" content="Pictureshow.co">
+    <meta name="description" content="Pictureshow.co, Richard Reininger">
+    <meta name="keywords" content="Pictureshow.co, Richard Reininger">
+    <meta name="author" content="Pictureshow.co, Richard Reininger">
     <title>Pictureshow.co</title>
-    <!-- <link rel="shortcut icon" href="" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
   </head>
 
@@ -43,8 +43,8 @@
       </header>
 
       <main class="nav__wrapper-adjust">
-        <div id="splash_loop_wrapper" class="video__wrapper">
-          <video id="splash_loop" class="video__item" data-src="assets/pictureshow_splash_loop.mp4" loop="loop" muted="muted" src="assets/pictureshow_splash_loop.mp4" autoplay></video>
+        <div class="video__wrapper">
+          <video id="main_reel" class="video__item" loop="loop" muted="muted" src="assets/pictureshow_main_reel.mp4" autoplay></video>
         </div>
 
         <div class="quote__wrapper">
@@ -62,7 +62,7 @@
             <h4 class="video__thumbnail-company">Next Thing Co.</h4>
             <h1 class="video__thumbnail-title">C.H.I.P. - The World's First $9 Computer</h1>
             <h3 class="video__thumbnail-roles">Concept - Producer - Writer - Director - Editor</h3>
-            <button>Launch Video</button>
+            <button id="chip" class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
 
@@ -72,7 +72,7 @@
             <h4 class="video__thumbnail-company">Volvo</h4>
             <h1 class="video__thumbnail-title">Designed Around You - Garrett Weber-Gale</h1>
             <h3 class="video__thumbnail-roles">Producer - Writer - Director - Editor</h3>
-            <button>Launch Video</button>
+            <button class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
 
@@ -82,7 +82,7 @@
             <h4 class="video__thumbnail-company">New Holland</h4>
             <h1 class="video__thumbnail-title">New Holland Smart - Jordan Kambeitz</h1>
             <h3 class="video__thumbnail-roles">Producer - Director - Editor</h3>
-            <button>Launch Video</button>
+            <button class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
 
@@ -92,7 +92,7 @@
             <h4 class="video__thumbnail-company">Next Thing Co.</h4>
             <h1 class="video__thumbnail-title">PICO-8 on PocketC.H.I.P.</h1>
             <h3 class="video__thumbnail-roles">Writer - Producer - Director</h3>
-            <button>Launch Video</button>
+            <button class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
 
@@ -102,7 +102,7 @@
             <h4 class="video__thumbnail-company">Next Thing Co.</h4>
             <h1 class="video__thumbnail-title">Dashbot</h1>
             <h3 class="video__thumbnail-roles">Insert roles here</h3>
-            <button>Launch Video</button>
+            <button class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
 
@@ -112,7 +112,7 @@
             <h4 class="video__thumbnail-company">Next Thing Co.</h4>
             <h1 class="video__thumbnail-title">Bin Horror</h1>
             <h3 class="video__thumbnail-roles">Insert roles here</h3>
-            <button>Launch Video</button>
+            <button class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
 
@@ -122,7 +122,7 @@
             <h4 class="video__thumbnail-company">Insert Company here</h4>
             <h1 class="video__thumbnail-title">Insert Title here</h1>
             <h3 class="video__thumbnail-roles">Insert roles here</h3>
-            <button>Launch Video</button>
+            <button class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
 
@@ -132,7 +132,7 @@
             <h4 class="video__thumbnail-company">Insert Company here</h4>
             <h1 class="video__thumbnail-title">Insert Title here</h1>
             <h3 class="video__thumbnail-roles">Insert roles here</h3>
-            <button>Launch Video</button>
+            <button class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
 
@@ -142,6 +142,7 @@
 
     <!-- <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script> -->
     <!-- <script type="text/javascript" src="js/index.min.js"></script> -->
+    <script type="text/javascript" src="js/player.min.js"></script>
     <script type="text/javascript" src="src/index.js"></script>
   </body>
 </html>
