@@ -18,22 +18,16 @@
         <nav id="nav__wrapper" class="nav__wrapper">
           <ul class="nav__items">
             <li class="nav__item">
-              <a href="https://vimeopro.com/flybucket/pictureshow" target="_blank">Portfolio</a>
+              <a href="https://vimeopro.com/pictureshowdotco/pictureshow" target="_blank">Portfolio</a>
             </li>
             <li class="nav__item">
-              <a href="https://vimeopro.com/flybucket/narrative" target="_blank">Narrative</a>
+              <a href="https://vimeopro.com/pictureshowdotco/narrative" target="_blank">Narrative</a>
             </li>
-            <li class="nav__item">
-              <a href="#">Clients</a>
-            </li>
-            <li class="nav__item">
+            <li class="nav__item hidden-xxs">
               <img class="nav__logo" src="assets/pictureshow_logo.png">
             </li>
             <li class="nav__item">
               <a href="#">About</a>
-            </li>
-            <li class="nav__item">
-              <a href="#">Blog</a>
             </li>
             <li class="nav__item">
               <a href="mailto:&#114;&#105;&#099;&#104;&#097;&#114;&#100;&#064;&#112;&#105;&#099;&#116;&#117;&#114;&#101;&#115;&#104;&#111;&#119;&#046;&#099;&#111;">Contact</a>
@@ -44,7 +38,7 @@
 
       <main class="nav__wrapper-adjust">
         <div class="video__wrapper">
-          <video id="main_reel" class="video__item" loop="loop" muted="muted" src="assets/pictureshow_main_reel.mp4" autoplay></video>
+          <video id="reel" class="video__item" loop="loop" muted="muted" src="assets/pictureshow_reel.mp4" autoplay></video>
         </div>
 
         <div class="quote__wrapper">
@@ -53,7 +47,7 @@
             Let’s tell your story.
           </h1>
           <h4>Your Voice. My Eyes. Let’s Harmonize.</h4>
-          <h4>Creative + Production + Post</h4>
+          <h4><a href="mailto:&#114;&#105;&#099;&#104;&#097;&#114;&#100;&#064;&#112;&#105;&#099;&#116;&#117;&#114;&#101;&#115;&#104;&#111;&#119;&#046;&#099;&#111;">Make Contact.</a></h4>
         </div>
 
         <div class="video__wrapper">
@@ -61,7 +55,6 @@
           <div class="video__thumbnail-about">
             <h4 class="video__thumbnail-company">Next Thing Co.</h4>
             <h1 class="video__thumbnail-title">C.H.I.P. - The World's First $9 Computer</h1>
-            <h3 class="video__thumbnail-roles">Concept - Producer - Writer - Director - Editor</h3>
             <button id="chip" class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
@@ -71,8 +64,7 @@
           <div class="video__thumbnail-about">
             <h4 class="video__thumbnail-company">Volvo</h4>
             <h1 class="video__thumbnail-title">Designed Around You - Garrett Weber-Gale</h1>
-            <h3 class="video__thumbnail-roles">Producer - Writer - Director - Editor</h3>
-            <button class="video__thumbnail-btn">Launch Video</button>
+            <button id="volvo" class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
 
@@ -81,8 +73,7 @@
           <div class="video__thumbnail-about">
             <h4 class="video__thumbnail-company">New Holland</h4>
             <h1 class="video__thumbnail-title">New Holland Smart - Jordan Kambeitz</h1>
-            <h3 class="video__thumbnail-roles">Producer - Director - Editor</h3>
-            <button class="video__thumbnail-btn">Launch Video</button>
+            <button id="new_holland" class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
 
@@ -91,8 +82,7 @@
           <div class="video__thumbnail-about">
             <h4 class="video__thumbnail-company">Next Thing Co.</h4>
             <h1 class="video__thumbnail-title">PICO-8 on PocketC.H.I.P.</h1>
-            <h3 class="video__thumbnail-roles">Writer - Producer - Director</h3>
-            <button class="video__thumbnail-btn">Launch Video</button>
+            <button id="pico8" class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
 
@@ -101,8 +91,7 @@
           <div class="video__thumbnail-about">
             <h4 class="video__thumbnail-company">Next Thing Co.</h4>
             <h1 class="video__thumbnail-title">Dashbot</h1>
-            <h3 class="video__thumbnail-roles">Insert roles here</h3>
-            <button class="video__thumbnail-btn">Launch Video</button>
+            <button id="dbot" class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
 
@@ -111,28 +100,25 @@
           <div class="video__thumbnail-about">
             <h4 class="video__thumbnail-company">Next Thing Co.</h4>
             <h1 class="video__thumbnail-title">Bin Horror</h1>
-            <h3 class="video__thumbnail-roles">Insert roles here</h3>
-            <button class="video__thumbnail-btn">Launch Video</button>
+            <button id="bin_horror" class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
 
         <div class="video__wrapper">
           <img class="video__thumbnail" src="assets/EFFECT.ink.png">
           <div class="video__thumbnail-about">
-            <h4 class="video__thumbnail-company">Insert Company here</h4>
-            <h1 class="video__thumbnail-title">Insert Title here</h1>
-            <h3 class="video__thumbnail-roles">Insert roles here</h3>
-            <button class="video__thumbnail-btn">Launch Video</button>
+            <h4 class="video__thumbnail-company">Ink</h4>
+            <h1 class="video__thumbnail-title">Ink Launch Video</h1>
+            <button id="ink" class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
 
         <div class="video__wrapper">
           <img class="video__thumbnail" src="assets/EFFECT.key.png">
           <div class="video__thumbnail-about">
-            <h4 class="video__thumbnail-company">Insert Company here</h4>
-            <h1 class="video__thumbnail-title">Insert Title here</h1>
-            <h3 class="video__thumbnail-roles">Insert roles here</h3>
-            <button class="video__thumbnail-btn">Launch Video</button>
+            <h4 class="video__thumbnail-company">Key Ingredient</h4>
+            <h1 class="video__thumbnail-title">Key Ingredient Coming Attractions</h1>
+            <button id="key_ingredient" class="video__thumbnail-btn">Launch Video</button>
           </div>
         </div>
 

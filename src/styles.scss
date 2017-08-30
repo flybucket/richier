@@ -1,17 +1,4 @@
-$background-color: #f7f7f7;
-$text-color: #544444;
-$accent-color: #3fb8af;
-
-@font-face {
-  font-family: 'Didot';
-  src: url('../fonts/Didot.ttf') format('truetype'); /* Safari, Android, iOS */
-}
-
-@font-face {
-  font-family: 'Gill Sans';
-  src: url('../fonts/GillSans-Light.ttf') format('truetype'); /* Safari, Android, iOS */
-  font-weight: 300;
-}
+@import 'partials';
 
 html,
 body {
@@ -26,7 +13,6 @@ body {
 }
 
 main {
-  // margin-top: 100px;
   position: relative;
 }
 
@@ -41,9 +27,14 @@ a {
 
 .body {
   &__wrapper {
+    @include media(xxs) {
+      padding: 0 5px;
+    }
+    @include media(xs) {
+      padding: 0 15px;
+    }
     max-width: 1024px;
     margin: 0 auto;
-    padding: 0 15px;
     position: relative;
   }
 }
@@ -175,15 +166,22 @@ a {
       }
     }
 
-    &-company,
-    &-roles {
+    &-company {
+      @include media(xxs) {
+        margin: 0;
+      }
       margin-top: 0;
       font-family: 'Gill Sans', sans-serif;
       font-weight: 300;
     }
 
     &-title {
-      margin-bottom: 0;
+      @include media(xxs) {
+        font-size: 1rem;
+      }
+      @include media(xs) {
+        font-size: 2rem;
+      }
       font-family: 'Didot', serif;
       font-weight: 300;
     }
@@ -196,11 +194,23 @@ a {
 
 .quote {
   &__wrapper {
-    margin-top: 200px;
-    margin-bottom: 200px;
+    @include media(xxs) {
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+    @include media(xs) {
+      margin-top: 200px;
+      margin-bottom: 200px;
+    }
     text-align: center;
 
     & h1 {
+      @include media(xxs) {
+        font-size: 1.5rem;
+      }
+      @include media(xs) {
+        font-size: 2rem;
+      }
       font-family: 'Didot', serif;
       font-weight: 300;
       letter-spacing: -1px;
@@ -210,6 +220,14 @@ a {
       margin: 5px;
       font-family: 'Gill Sans', sans-serif;
       font-weight: 300;
+    }
+  }
+}
+
+.hidden {
+  &-xxs {
+    @include media(xxs) {
+      display: none;
     }
   }
 }

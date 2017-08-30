@@ -39,57 +39,58 @@ const videos = {
   volvo: 62275317
 }
 
-function replaceVideo (videoName) {
-  const videoButton = document.getElementById(videoName)
-  const videoWrapper = videoButton.parentNode.parentNode
+function replaceVideo (videoPlayerID) {
+  const mainVideo = videoPlayerID === 'reel'
+  const videoPlayerOriginal = document.getElementById(videoPlayerID)
+  let videoWrapper = videoPlayerOriginal.parentNode
 
+  // Video wrapper is one level higher in all non-main videos
+  if (!mainVideo) {
+    videoWrapper = videoWrapper.parentNode
+  }
+
+  // Create the vimeo embedd div
   const videoPlayer = document.createElement('div')
-  videoPlayer.classList.add('video__player')
-  videoPlayer.innerHTML = `<iframe src="https://player.vimeo.com/video/${videos[videoName]}?title=false&portrait=false&byline=false&autoplay=true" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>`
-  videoWrapper.appendChild(videoPlayer)
+  const videoPlayerClass = mainVideo ? 'video__player-main' : 'video__player'
+  videoPlayer.classList.add(videoPlayerClass)
+  videoPlayer.innerHTML = `<iframe src="https://player.vimeo.com/video/${videos[videoPlayerID]}?title=false&portrait=false&byline=false&autoplay=true" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>`
 
+  // Video replacements are handled differently at the main level and at the portfolio level
+  if (mainVideo) {
+    videoWrapper.replaceChild(videoPlayer, mainReel)
+  } else {
+    videoWrapper.appendChild(videoPlayer)
+  }
+
+  // When video has completed playing, swap back in the original static media
   const iframe = videoPlayer.querySelector('iframe')
+  // Note: Vimeo class is being loaded in a vendor js (see js/player.min.js)
   const player = new Vimeo.Player(iframe)
-
-  // When reel has completed playing, swap back in the looping splash screen
   player.on('ended', () => {
-    console.log('finished playing', videoName)
-    // Safari/Chrome on desktop do not like video tag DOM manipulation
-    // After replacing the child, the video will not autoplay
-    // so we need to trigger it manually
+    if (mainVideo) {
+      videoWrapper.replaceChild(mainReel, videoPlayer)
+      // Safari/Chrome on desktop do not like video tag DOM manipulation
+      // After replacing the child, the video will not autoplay
+      // so we need to trigger it manually
+      mainReel.play()
+    } else {
+      // Remove the vimeo embedd for everything else
+      videoPlayer.remove()
+    }
   })
 }
 
+// Attach click events that replace videos to all buttons!
 const buttons = document.getElementsByTagName('button')
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', () => {
     let videoName = buttons[i].id
-    console.log(videoName, 'was clicked')
     replaceVideo(videoName)
   })
 }
 
 // Replace splash main movie reel
-const mainReel = document.getElementById('main_reel')
+const mainReel = document.getElementById('reel')
 mainReel.addEventListener('click', () => {
-  const videoWrapper = mainReel.parentNode
-  const videoPlayer = document.createElement('div')
-
-  videoPlayer.classList.add('video__player-main')
-  videoPlayer.innerHTML = `<iframe src="https://player.vimeo.com/video/${videos['reel']}?title=false&portrait=false&byline=false&autoplay=true" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>`
-
-  videoWrapper.replaceChild(videoPlayer, mainReel)
-
-  const iframe = videoPlayer.querySelector('iframe')
-  const player = new Vimeo.Player(iframe)
-
-  // When reel has completed playing, swap back in the looping splash screen
-  player.on('ended', () => {
-    console.log('finished playing main reel')
-    videoWrapper.replaceChild(mainReel, videoPlayer)
-    // Safari/Chrome on desktop do not like video tag DOM manipulation
-    // After replacing the child, the video will not autoplay
-    // so we need to trigger it manually
-    mainReel.play()
-  })
+  replaceVideo('reel')
 })

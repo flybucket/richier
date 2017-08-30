@@ -1,0 +1,35 @@
+$background-color: #f7f7f7;
+$text-color: #544444;
+$accent-color: #3fb8af;
+
+@font-face {
+  font-family: 'Didot';
+  src: url('../fonts/Didot.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../fonts/GillSans-Light.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-weight: 300;
+}
+
+@mixin media($bp) {
+  @if $bp == xxs {
+    @media (max-width: 479px) { @content; }
+  }
+  @else if $bp == xs {
+    @media (min-width: 480px) { @content; }
+  }
+  @else if $bp == sm {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $bp == md {
+    @media (min-width: 992px) { @content; }
+  }
+  @else if $bp == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+  @else {
+    @warn 'Not a supported value';
+  }
+}
