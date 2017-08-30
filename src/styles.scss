@@ -1,0 +1,115 @@
+// sass --watch src/styles.scss:css/styles.css --style compressed
+$background-color: #f7f7f7;
+$text-color: #544444;
+$accent-color: #3fb8af;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: $text-color;
+}
+body {
+  background: $background-color;
+  margin: 0 auto;
+}
+
+main {
+  // margin-top: 100px;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.body {
+  &__wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+  }
+}
+
+.nav {
+  &__item {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  &__logo {
+    width: 50px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 100%;
+    transition: all 400ms ease;
+    z-index: 9000;
+    background: $background-color;
+
+    &-adjust {
+      margin-top: 100px;
+    }
+  }
+}
+
+.video {
+  &__item {
+    width: 100%;
+  }
+
+  &__thumbnail {
+    width: 100%;
+
+    &-about {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+}
+
+.quote {
+  &__wrapper {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    text-align: center;
+
+    & h4 {
+      margin: 5px;
+      font-family: sans-serif;
+      font-weight: normal;
+    }
+  }
+}
