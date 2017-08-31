@@ -19,9 +19,10 @@ main {
 a {
   text-decoration: none;
   color: $tertiary-color;
+  transition: 300ms;
 
   &:hover {
-    color: $secondary-color;
+    color: $accent-color;
   }
 }
 
@@ -41,7 +42,7 @@ a {
 
 .nav {
   &__item {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Gill Sans', sans-serif;
     font-size: 0.8rem;
     font-weight: 300;
   }
@@ -57,8 +58,30 @@ a {
   }
 
   &__logo {
-    width: 50px;
-    transition: all 400ms ease;
+    width: 175px;
+    height: 100px;
+    position: relative;
+    text-align: center;
+
+    &-title,
+    &-subtitle {
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
+
+    &-title {
+      font-family: 'Didot';
+      font-size: 1.5rem;
+      top: 45%;
+      left: 50%;
+
+    }
+    &-subtitle {
+      font-size: 0.6rem;
+      top: 60%;
+      left: 51%;
+      width: 100%;
+    }
   }
 
   &__wrapper {
@@ -82,11 +105,17 @@ a {
 
 .video {
   &__button-play {
+    @include media(xxs) {
+      width: 120px;
+    }
+    @include media(xs) {
+      width: 200px;
+    }
     position: absolute;
     top: 66%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px;
+
   }
 
   &__item {
@@ -142,36 +171,16 @@ a {
     }
 
     &-btn {
-      flex: 1 1 auto;
-      padding: 10px 30px;
-      position: relative;
-      overflow: hidden;
-      transition: 300ms;
+      @extend %action-button;
       border: 2px solid $background-color;
       color: $background-color;
-      font-family: 'Gill Sans', sans-serif;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      background: transparent;
 
       &:after {
-        content: '';
-        bottom: 0;
-        left: 50%;
-        height: 3px;
-        position: absolute;
-        transition: 300ms;
-        width: 0;
         background: $background-color;
       }
 
       &:hover {
-        cursor: pointer;
         box-shadow: inset 0px 0px 0px 3px $background-color;
-      }
-
-      &:focus {
-        outline: none;
       }
     }
 
@@ -226,10 +235,73 @@ a {
     }
 
     & h4 {
-      margin: 5px;
+      margin: 5px 0 20px;
       font-family: 'Gill Sans', sans-serif;
       font-weight: 300;
     }
+  }
+}
+
+.about {
+  &__intro {
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $background-color;
+
+    & h1 {
+      font-family: 'Didot';
+    }
+
+    & h3,
+    & h4 {
+      font-family: 'Gill Sans';
+    }
+  }
+
+  &__facts {
+    text-align: center;
+
+    & h1 {
+      margin: 70px 0;
+      font-family: 'Didot';
+    }
+
+    & h3,
+    & h4 {
+      font-family: 'Gill Sans';
+    }
+
+    & h3 {
+      margin-bottom: 0;
+    }
+    & h4 {
+      margin-top: 0;
+    }
+  }
+
+  &__splash {
+    position: relative;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+.action-btn {
+  @extend %action-button;
+  border: 2px solid $secondary-color;
+  color: $secondary-color;
+
+  &:after {
+    background: $secondary-color;
+  }
+
+  &:hover {
+    box-shadow: inset 0px 0px 0px 3px $secondary-color;
   }
 }
 
