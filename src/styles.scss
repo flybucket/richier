@@ -18,10 +18,10 @@ main {
 
 a {
   text-decoration: none;
-  color: $text-color;
+  color: $tertiary-color;
 
   &:hover {
-    color: $accent-color;
+    color: $secondary-color;
   }
 }
 
@@ -41,8 +41,9 @@ a {
 
 .nav {
   &__item {
-    font-family: 'Gill Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 0.8rem;
+    font-weight: 300;
   }
 
   &__items {
@@ -80,6 +81,14 @@ a {
 }
 
 .video {
+  &__button-play {
+    position: absolute;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+  }
+
   &__item {
     width: 100%;
     z-index: 9000;
