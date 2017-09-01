@@ -80,10 +80,12 @@ function replaceVideo (videoPlayerID) {
 // Attach click events that replace videos to all buttons!
 const buttons = document.getElementsByTagName('button')
 for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener('click', () => {
-    let videoName = buttons[i].id
-    replaceVideo(videoName)
-  })
+  let videoName = buttons[i].id
+  if (videoName) {
+    buttons[i].addEventListener('click', () => {
+      replaceVideo(videoName)
+    })
+  }
 }
 
 // Replace splash main movie reel

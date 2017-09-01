@@ -26,6 +26,11 @@ a {
   }
 }
 
+// Hide play button on <video> tags
+video::-webkit-media-controls-start-playback-button {
+  display: none;
+}
+
 .body {
   &__wrapper {
     @include media(xxs) {
