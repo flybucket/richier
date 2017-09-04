@@ -90,6 +90,15 @@ for (let i = 0; i < buttons.length; i++) {
 
 // Replace splash main movie reel
 const mainReel = document.getElementById('reel')
-mainReel.addEventListener('click', () => {
-  replaceVideo('reel')
-})
+const mainReelPlayButton = document.getElementsByClassName('video__button-play')[0]
+if (mainReel) {
+  // Androids don't play nice with video tags
+  // Must manually play videos
+  mainReel.play()
+  mainReel.addEventListener('click', () => {
+    replaceVideo('reel')
+  })
+  mainReelPlayButton.addEventListener('click', () => {
+    replaceVideo('reel')
+  })
+}

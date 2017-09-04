@@ -14,6 +14,20 @@ $text-color: $secondary-color;
   src: url('../fonts/GillSans-Light.ttf') format('truetype'); /* Safari, Android, iOS */
   font-weight: 300;
 }
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('../fonts/GillSans.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-weight: 500;
+}
+
+%iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9002;
+}
 
 %action-button {
   flex: 1 1 auto;
