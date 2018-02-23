@@ -33,7 +33,23 @@ const videos = {
   new_holland: 84741090,
   pico8: 230846595,
   reel: 231239209,
-  volvo: 62275317
+  editreel: 256707307,
+  volvo: 62275317,
+  chan: 116976989,
+  perry_hamlin: 108628040,
+  macys_inc: 95559201,
+  macys_ck: 256869735,
+  lenovo_y: 95559201,
+  lenovo_yoga: 92186587,
+  lenovo_z: 92186540,
+  focal: 92783337,
+  livestrong: 90188086,
+  pchip: 230847045,
+  prodchip: 230846642,
+  otto: 230847459,
+  audition: 256868075,
+  dell: 255429818,
+  rice: 99767852
 }
 
 function replaceVideo (videoPlayerID) {
