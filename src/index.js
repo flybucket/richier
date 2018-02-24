@@ -39,7 +39,7 @@ const videos = {
   perry_hamlin: 108628040,
   macys_inc: 95559201,
   macys_ck: 256869735,
-  lenovo_y: 95559201,
+  lenovo_y: 92186588,
   lenovo_yoga: 92186587,
   lenovo_z: 92186540,
   focal: 92783337,
