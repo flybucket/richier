@@ -54,24 +54,30 @@ const videos = {
 
 function replaceVideo (videoPlayerID) {
   const mainVideo = videoPlayerID === 'reel'
+  const mainEdit = videoPlayerID === 'editreel'
   const videoPlayerOriginal = document.getElementById(videoPlayerID)
   let videoWrapper = videoPlayerOriginal.parentNode
 
   // Video wrapper is one level higher in all non-main videos
-  if (!mainVideo) {
+  if (!mainVideo) 
+  if (!mainEdit) {
     videoWrapper = videoWrapper.parentNode
   }
 
   // Create the vimeo embedd div
   const videoPlayer = document.createElement('div')
   const videoPlayerClass = mainVideo ? 'video__player-main' : 'video__player'
+  const videoPlayerClass = mainEdit ? 'video__player-main' : 'video__player'
   videoPlayer.classList.add(videoPlayerClass)
   videoPlayer.innerHTML = `<iframe src="https://player.vimeo.com/video/${videos[videoPlayerID]}?title=false&portrait=false&byline=false&autoplay=true" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>`
 
   // Video replacements are handled differently at the main level and at the portfolio level
   if (mainVideo) {
     videoWrapper.replaceChild(videoPlayer, mainReel)
-  } else {
+  } if (mainEdit) {
+    videoWrapper.replaceChild(videoPlayer, mainReel2)
+  
+  else {
     videoWrapper.appendChild(videoPlayer)
   }
 
@@ -82,6 +88,12 @@ function replaceVideo (videoPlayerID) {
   player.on('ended', () => {
     if (mainVideo) {
       videoWrapper.replaceChild(mainReel, videoPlayer)
+      // Safari/Chrome on desktop do not like video tag DOM manipulation
+      // After replacing the child, the video will not autoplay
+      // so we need to trigger it manually
+      mainReel.play()
+    if (mainEdit) {
+      videoWrapper.replaceChild(mainReel2, videoPlayer)
       // Safari/Chrome on desktop do not like video tag DOM manipulation
       // After replacing the child, the video will not autoplay
       // so we need to trigger it manually
@@ -106,7 +118,9 @@ for (let i = 0; i < buttons.length; i++) {
 
 // Replace splash main movie reel
 const mainReel = document.getElementById('reel')
+const mainReel2 = document.getElementByID('editreel')
 const mainReelPlayButton = document.getElementsByClassName('video__button-play')[0]
+const mainReel2PlayButton = document.getElementsByClassName('video__button-play')[0]
 if (mainReel) {
   // Androids don't play nice with video tags
   // Must manually play videos
@@ -116,5 +130,14 @@ if (mainReel) {
   })
   mainReelPlayButton.addEventListener('click', () => {
     replaceVideo('reel')
+ if (mainReel2) {
+  // Androids don't play nice with video tags
+  // Must manually play videos
+  mainReel2.play()
+  mainReel2.addEventListener('click', () => {
+    replaceVideo('editreel')
+  })
+  mainReelPlayButton.addEventListener('click', () => {
+    replaceVideo('editreel')
   })
 }
