@@ -49,7 +49,8 @@ const videos = {
   otto: 230847459,
   audition: 256868075,
   dell: 255429818,
-  rice: 99767852
+  rice: 99767852,
+  lumos: 263285137
 }
 
 function replaceVideo (videoPlayerID) {
