@@ -51,7 +51,8 @@ const videos = {
   dell: 255429818,
   rice: 99767852,
   lumos: 263285137,
-  joshua: 263392906
+  joshua: 263392906,
+  lumen: 279578240
 }
 
 function replaceVideo (videoPlayerID) {
