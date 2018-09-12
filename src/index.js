@@ -52,7 +52,8 @@ const videos = {
   rice: 99767852,
   lumos: 263285137,
   joshua: 263392906,
-  lumen: 279578240
+  lumen: 279578240,
+  seismic: 289312172
 }
 
 function replaceVideo (videoPlayerID) {
