@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="pictureshow.co/aging2, Richard Reininger">
+    <meta name="keywords" content="pictureshow.co/aging2, Richard Reininger">
+    <meta name="author" content="pictureshow.co/aging2, Richard Reininger">
+    <title>pictureshow.co/aging2</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <div class="body__wrapper">
+      <header>
+        <nav id="nav__wrapper" class="nav__wrapper">
+          <ul class="nav__items">
+            <li class="nav__item hidden-xxs">
+              <a href="/">
+                <div class="nav__logo">
+                  <span class="nav__logo-title">pictureshow.co/aging2.0</span>
+                  <span class="nav__logo-subtitle">richard reininger | creative director</span>
+                  <span class="nav__logo-subtitle">frazier phillips | producer & editor</span>
+                </div>
+              </a>
+            </li>
+            </li>
+            <li class="nav__item">
+              <a href="mailto:&#114;&#105;&#099;&#104;&#097;&#114;&#100;&#064;&#112;&#105;&#099;&#116;&#117;&#114;&#101;&#115;&#104;&#111;&#119;&#046;&#099;&#111;">contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="nav__wrapper-adjust">
+        <div class="video__wrapper">
+          <video id="reel" class="video__item" loop="loop" muted="muted" src="assets/seismic_reel.mp4" autoplay></video>
+        </div>
+
+        <div class="quote__wrapper">
+          <h1>
+            High Tech Innovations deserve High Concept Video.
+          </h1>
+          <h4>
+          Get the full service agency experience without the full blown agency costs.<br>
+            creative | prouduction | vfx | finishing
+          </h4>
+          <a href="mailto:&#114;&#105;&#099;&#104;&#097;&#114;&#100;&#064;&#112;&#105;&#099;&#116;&#117;&#114;&#101;&#115;&#104;&#111;&#119;&#046;&#099;&#111;">
+            <button class="action-btn">get started</button>
+          </a>
+        </div>
+        
+        
+        <div class="video__wrapper">
+          <img class="video__thumbnail" src="assets/EFFECT.seismic2.jpg">
+          <div class="video__thumbnail-about">
+            <h1 class="video__thumbnail-title">Seismic Powered Clothing | A Quick Case Study</h1>
+            <button id="seismic" class="video__thumbnail-btn">check it!</button>
+          </div>
+        </div>
+        
+        
+        <div class="quote__wrapper">
+          <h1>
+            "These guys did an amazing job. Wow. Just wow."
+          </h1>
+          <h4>
+Sarah XXXX, Seismic XXXX & Former Aging 2.0 XXX 
+          </h4>
+        </div>
+        
+        
+        <div class="video__wrapper">
+          <img class="video__thumbnail" src="assets/EFFECT.goodbadweb.jpg">
+          <div class="video__thumbnail-about">
+            <h1 class="video__thumbnail-title">Seismic Rough Animatic</h1>
+            <button id="joshua" class="video__thumbnail-btn">check it!</button>
+          </div>
+        </div>
+        
+        
+        <div class="quote__wrapper">
+          <h1>
+            Seismic is just one example. We work in many different styles and tones.<br>
+            Here are some samples.
+          </h1>
+        </div>  
+        
+        <div class="video__wrapper">
+          <img class="video__thumbnail" src="assets/EFFECT.lumen.jpg">
+          <div class="video__thumbnail-about">
+            <h4 class="video__thumbnail-company">Lumen</h4>
+            <h1 class="video__thumbnail-title">Lumen Launch Video</h1>
+            <button id="lumen" class="video__thumbnail-btn">check it!</button>
+          </div>
+        </div>
+        
+        <div class="video__wrapper">
+          <img class="video__thumbnail" src="assets/EFFECT.chip.jpg">
+          <div class="video__thumbnail-about">
+            <h4 class="video__thumbnail-company">Next Thing Co.</h4>
+            <h1 class="video__thumbnail-title">C.H.I.P. - The World's First $9 Computer</h1>
+            <button id="chip" class="video__thumbnail-btn">check it!</button>
+          </div>
+        </div>
+
+        <div class="video__wrapper">
+          <img class="video__thumbnail" src="assets/EFFECT.volvo.jpg">
+          <div class="video__thumbnail-about">
+            <h4 class="video__thumbnail-company">Volvo</h4>
+            <h1 class="video__thumbnail-title">Designed Around You - Garrett Weber-Gale</h1>
+            <button id="volvo" class="video__thumbnail-btn">check it!</button>
+          </div>
+        </div>
+
+        <div class="video__wrapper">
+          <img class="video__thumbnail" src="assets/EFFECT.dbot.jpg">
+          <div class="video__thumbnail-about">
+            <h4 class="video__thumbnail-company">Next Thing Co.</h4>
+            <h1 class="video__thumbnail-title">Dashbot</h1>
+            <button id="dbot" class="video__thumbnail-btn">check it!</button>
+          </div>
+        </div>
+
+        <div class="quote__wrapper">
+          <h1>
+            Let's build your brand.<br>
+            Say hi and we'll get started.
+          </h1>
+          <a href="mailto:&#114;&#105;&#099;&#104;&#097;&#114;&#100;&#064;&#112;&#105;&#099;&#116;&#117;&#114;&#101;&#115;&#104;&#111;&#119;&#046;&#099;&#111;">
+            <button class="action-btn">Let's make a thing.</button>
+          </a>
+        </div>
+
+        <div class="footer__wrapper">
+          © 2018 Richard Reininger Oakland, CA
+        </div>
+      </main>
+    </div>
+
+    <script type="text/javascript" src="js/player.min.js"></script>
+    <script type="text/javascript" src="js/index.min.js"></script>
+  </body>
+</html>
