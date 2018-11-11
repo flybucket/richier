@@ -122,7 +122,7 @@ for (let i = 0; i < buttons.length; i++) {
 
 // Replace splash main movie reel
 const mainReel = document.getElementById('reel')
-const mainReel2 = document.getElementByID('editreel')
+const mainReel2 = document.getElementById('editreel')
 const mainReelPlayButton = document.getElementsByClassName('video__button-play')[0]
 const mainReel2PlayButton = document.getElementsByClassName('video__button-play')[0]
 if (mainReel) {
