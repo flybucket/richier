@@ -75,7 +75,7 @@ video::-webkit-media-controls-start-playback-button {
     }
 
     &-title {
-      font-family: 'Didot';
+      font-family: 'Qwigley';
       font-size: 1.5rem;
       top: 45%;
       left: 50%;
@@ -197,7 +197,7 @@ video::-webkit-media-controls-start-playback-button {
       @include media(xs) {
         font-size: 2rem;
       }
-      font-family: 'Didot', serif;
+      font-family: 'Qwigley', serif;
       font-weight: 300;
     }
   }
@@ -226,7 +226,7 @@ video::-webkit-media-controls-start-playback-button {
       @include media(xs) {
         font-size: 2rem;
       }
-      font-family: 'Didot', serif;
+      font-family: 'Qwigley', serif;
       font-weight: 300;
       letter-spacing: -1px;
     }
@@ -263,7 +263,7 @@ video::-webkit-media-controls-start-playback-button {
       @include media(xxs) {
         margin: 0;
       }
-      font-family: 'Didot';
+      font-family: 'Qwigley';
     }
 
     & h3,
@@ -290,7 +290,7 @@ video::-webkit-media-controls-start-playback-button {
 
     & h1 {
       margin: 70px 0;
-      font-family: 'Didot';
+      font-family: 'Qwigley';
     }
 
     & h3,
