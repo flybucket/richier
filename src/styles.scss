@@ -47,7 +47,7 @@ video::-webkit-media-controls-start-playback-button {
 
 .nav {
   &__item {
-    font-family: 'Gill Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
     font-weight: 300;
   }
@@ -76,13 +76,13 @@ video::-webkit-media-controls-start-playback-button {
 
     &-title {
       font-family: 'Qwigley';
-      font-size: 1.5rem;
+      font-size: 3rem;
       top: 45%;
       left: 50%;
 
     }
     &-subtitle {
-      font-size: 0.6rem;
+      font-size: 0.75rem;
       top: 60%;
       left: 51%;
       width: 100%;
@@ -186,7 +186,7 @@ video::-webkit-media-controls-start-playback-button {
         margin: 0;
       }
       margin-top: 0;
-      font-family: 'Gill Sans', sans-serif;
+      font-family: 'Roboto', sans-serif;
       font-weight: 300;
     }
 
@@ -197,7 +197,7 @@ video::-webkit-media-controls-start-playback-button {
       @include media(xs) {
         font-size: 2rem;
       }
-      font-family: 'Qwigley', serif;
+      font-family: 'Qwigley', cursive;
       font-weight: 300;
     }
   }
@@ -226,14 +226,14 @@ video::-webkit-media-controls-start-playback-button {
       @include media(xs) {
         font-size: 2rem;
       }
-      font-family: 'Qwigley', serif;
+      font-family: 'Qwigley', cursive;
       font-weight: 300;
       letter-spacing: -1px;
     }
 
     & h4 {
       margin: 5px 0 20px;
-      font-family: 'Gill Sans', sans-serif;
+      font-family: 'Roboto', sans-serif;
       font-weight: 300;
     }
   }
@@ -268,7 +268,7 @@ video::-webkit-media-controls-start-playback-button {
 
     & h3,
     & h4 {
-      font-family: 'Gill Sans';
+      font-family: 'Roboto';
       font-weight: 500;
     }
 
@@ -295,7 +295,7 @@ video::-webkit-media-controls-start-playback-button {
 
     & h3,
     & h4 {
-      font-family: 'Gill Sans';
+      font-family: 'Roboto';
     }
 
     & h3 {
@@ -321,7 +321,7 @@ video::-webkit-media-controls-start-playback-button {
   &__wrapper {
     margin-bottom: 15px;
     text-align: center;
-    font-family: 'Gill Sans';
+    font-family: 'Roboto';
     font-weight: 300;
   }
 }
