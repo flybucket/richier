@@ -9,8 +9,6 @@
   font-family:'Roboto';
   src:url("../fonts/Roboto.ttf") format("truetype");
   font-weight:500}
-font-family: 'Qwigley', cursive;
-font-family: 'Roboto', sans-serif;
 .video__player-main iframe,.video__player iframe {
   position:absolute;
   top:0;
