@@ -55,7 +55,10 @@ const videos = {
   lumen: 279578240,
   seismic: 289312172,
   laser: 295927841,
-  dabby: 340792580
+  dabby: 340792580,
+  neg:371223694,
+  t5:359206010,
+  talo:370418779
 }
 
 function replaceVideo (videoPlayerID) {
